@@ -12,7 +12,7 @@ import UIKit
 class UsersListViewController : UIViewController {
     
     
-    @IBOutlet weak var userTableView: UITableView!
+    @IBOutlet weak var tableView: UITableView!
     
     var usersList: [UserInfo] = []
     override func viewDidLoad() {
@@ -20,15 +20,15 @@ class UsersListViewController : UIViewController {
         navigationController?.navigationBar.isHidden = false
         self.title = "Users List"
         
-        let sort = UIBarButtonItem(title: "Sort", style: .plain, target: self, action: #selector(displaySortOptions))
+        let sort = UIBarButtonItem(title: "Sort Type", style: .plain, target: self, action: #selector(displaySortOptions))
         
         navigationItem.rightBarButtonItems = [sort]
         
         // Get hard coded users list 
         usersList = MockedData.getMockedUsersList()
-        userTableView.delegate = self
-        userTableView.dataSource = self
-        userTableView.tableFooterView = UIView()
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.tableFooterView = UIView()
         
     }
     
@@ -59,12 +59,12 @@ class UsersListViewController : UIViewController {
         usersList = usersList.sorted {
             $0.name < $1.name
         }
-        userTableView.reloadData()
+        tableView.reloadData()
     }
     
     func sortById(){
         usersList = usersList.sorted(by: { $0.id < $1.id })
-         userTableView.reloadData()
+         tableView.reloadData()
     }
     
 }

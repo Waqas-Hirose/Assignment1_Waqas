@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01Y-h1-Mvw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
@@ -10,7 +10,7 @@
         <!--Users List View Controller-->
         <scene sceneID="Ym7-JT-cpc">
             <objects>
-                <viewController id="nfq-St-vAZ" customClass="UsersListViewController" customModule="Assignment_1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UsersListViewController" id="nfq-St-vAZ" customClass="UsersListViewController" customModule="Assignment1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dra-CU-d2k">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -19,7 +19,7 @@
                                 <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserTableViewCell" rowHeight="61" id="ffw-SF-eJe" customClass="UserTableViewCell" customModule="Assignment_1" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserTableViewCell" rowHeight="61" id="ffw-SF-eJe" customClass="UserTableViewCell" customModule="Assignment1" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="61"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ffw-SF-eJe" id="csm-je-qsV">
@@ -60,8 +60,7 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="nfq-St-vAZ" id="yWN-FR-OZG"/>
-                                    <outlet property="delegate" destination="nfq-St-vAZ" id="Uho-If-lT9"/>
+                                    <outlet property="dataSource" destination="nfq-St-vAZ" id="RKo-y1-9Qr"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -76,30 +75,30 @@
                     </view>
                     <navigationItem key="navigationItem" id="JXw-vu-tHA"/>
                     <connections>
-                        <outlet property="userTableView" destination="kW1-a7-wfZ" id="TW6-Mc-5Vz"/>
+                        <outlet property="tableView" destination="kW1-a7-wfZ" id="W0S-x2-Kaq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XX3-J9-CNQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="855.20000000000005" y="52.623688155922046"/>
+            <point key="canvasLocation" x="1794.4000000000001" y="52.623688155922046"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="0vp-Hs-3fv">
+        <scene sceneID="Tva-rV-v5D">
             <objects>
-                <navigationController storyboardIdentifier="UsersListViewController" automaticallyAdjustsScrollViewInsets="NO" id="01Y-h1-Mvw" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="moC-dY-LFf" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="RlC-dP-jzc">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="DgZ-BX-8fZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="nfq-St-vAZ" kind="relationship" relationship="rootViewController" id="gtF-8R-A5o"/>
+                        <segue destination="nfq-St-vAZ" kind="relationship" relationship="rootViewController" id="d4T-GD-hWD"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zjh-Ue-oec" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Zy-lK-rov" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-84" y="52.623688155922046"/>
+            <point key="canvasLocation" x="855.20000000000005" y="52.623688155922046"/>
         </scene>
     </scenes>
 </document>
