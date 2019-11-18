@@ -1,14 +1,14 @@
 //
-//  Assignment_1UITests.swift
-//  Assignment_1UITests
+//  Assignment1UITests.swift
+//  Assignment1UITests
 //
 //  Created by TK-LPT-0142 on 11/15/19.
-//  Copyright © 2019 Waqas. All rights reserved.
+//  Copyright © 2019 TK-LPT-0142. All rights reserved.
 //
 
 import XCTest
 
-class Assignment_1UITests: XCTestCase {
+class Assignment1UITests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.

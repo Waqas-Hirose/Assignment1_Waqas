@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  Assignment_1
+//  Assignment1
 //
 //  Created by TK-LPT-0142 on 11/15/19.
-//  Copyright © 2019 Waqas. All rights reserved.
+//  Copyright © 2019 TK-LPT-0142. All rights reserved.
 //
 
 import UIKit

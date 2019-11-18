@@ -1,15 +1,15 @@
 //
-//  Assignment_1Tests.swift
-//  Assignment_1Tests
+//  Assignment1Tests.swift
+//  Assignment1Tests
 //
 //  Created by TK-LPT-0142 on 11/15/19.
-//  Copyright © 2019 Waqas. All rights reserved.
+//  Copyright © 2019 TK-LPT-0142. All rights reserved.
 //
 
 import XCTest
-@testable import Assignment_1
+@testable import Assignment1
 
-class Assignment_1Tests: XCTestCase {
+class Assignment1Tests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
