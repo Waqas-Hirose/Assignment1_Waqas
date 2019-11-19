@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class UsersListViewController : UIViewController, UITableViewDelegate, UITableViewDataSource{
+class UsersListViewController : UIViewController, UITableViewDataSource{
     
     
     @IBOutlet weak var tableView: UITableView!
@@ -26,7 +26,6 @@ class UsersListViewController : UIViewController, UITableViewDelegate, UITableVi
         
         // Get hard coded users list 
         usersList = MockedData.getMockedUsersList()
-        tableView.delegate = self
         tableView.dataSource = self
         tableView.tableFooterView = UIView()
         
@@ -38,12 +37,11 @@ class UsersListViewController : UIViewController, UITableViewDelegate, UITableVi
         let optionMenu = UIAlertController(title: nil, message: "Choose Option", preferredStyle: .actionSheet)
         
         let sortByName = UIAlertAction(title: "Sort By Name", style: .default) { (action) in
-            self.sortByName()
+            self.sortList(type: SortTypes.sortByName)
         }
         
         let sortById = UIAlertAction(title: "Sort By Id", style: .default) { (action) in
-            
-            self.sortById()
+            self.sortList(type: SortTypes.sortById)
             
         }
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
@@ -55,18 +53,19 @@ class UsersListViewController : UIViewController, UITableViewDelegate, UITableVi
         self.present(optionMenu, animated: true, completion: nil)
     }
     
-    func sortByName(){
-        usersList = usersList.sorted {
-            $0.name < $1.name
+    func sortList(type: SortTypes){
+        switch type {
+        case SortTypes.sortById:
+            usersList = usersList.sorted(by: { $0.id < $1.id })
+            tableView.reloadData()
+            
+        case SortTypes.sortByName:
+            usersList = usersList.sorted {
+                $0.name < $1.name
+            }
+            tableView.reloadData()
         }
-        tableView.reloadData()
     }
-    
-    func sortById(){
-        usersList = usersList.sorted(by: { $0.id < $1.id })
-        tableView.reloadData()
-    }
-    
     // number of rows in table view
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.usersList.count

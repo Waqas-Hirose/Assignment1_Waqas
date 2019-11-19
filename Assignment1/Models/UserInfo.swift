@@ -18,3 +18,8 @@ class UserInfo  {
         self.id = id
     }
 }
+
+enum SortTypes :Int{
+case sortById
+case sortByName
+}
