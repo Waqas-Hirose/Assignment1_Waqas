@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class UsersListViewController : UIViewController {
+class UsersListViewController : UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     
     @IBOutlet weak var tableView: UITableView!
@@ -43,7 +43,7 @@ class UsersListViewController : UIViewController {
         
         let sortById = UIAlertAction(title: "Sort By Id", style: .default) { (action) in
             
-             self.sortById()
+            self.sortById()
             
         }
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
@@ -64,19 +64,18 @@ class UsersListViewController : UIViewController {
     
     func sortById(){
         usersList = usersList.sorted(by: { $0.id < $1.id })
-         tableView.reloadData()
+        tableView.reloadData()
     }
     
-}
-
-//Mark: - UITableViewDataSource
-extension UsersListViewController: UITableViewDataSource {
+    // number of rows in table view
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return usersList.count
+        return self.usersList.count
     }
     
+    // create a cell for each table view row
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        // create a new cell if needed or reuse an old one
         let cell = tableView.dequeueReusableCell(withIdentifier: "UserTableViewCell") as! UserTableViewCell
         let id = usersList[indexPath.row].id
         let txtID = "ID:  \(id)"
@@ -87,26 +86,8 @@ extension UsersListViewController: UITableViewDataSource {
         cell.selectionStyle = .none
         
         return cell
-        
-    }
-    
-    
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 44
     }
 }
-
-//Mark: - UITableViewDelegate
-extension UsersListViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if(indexPath.row < usersList.count){
-            
-        }
-        
-    }
-}
-
 
 
 

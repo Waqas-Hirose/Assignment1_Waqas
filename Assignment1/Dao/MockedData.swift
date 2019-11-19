@@ -9,7 +9,7 @@
 import Foundation
 
 class MockedData {
-
+    
     static func getMockedUsersList() -> [UserInfo] {
         var usersList: [UserInfo] = []
         let user1 = UserInfo(id: 1, name:"Shiro")

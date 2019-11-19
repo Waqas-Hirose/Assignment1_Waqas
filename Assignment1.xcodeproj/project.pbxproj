@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		C2494ABA237E735B0020522B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2494AB9237E735B0020522B /* AppDelegate.swift */; };
-		C2494ABE237E735B0020522B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2494ABD237E735B0020522B /* ContentView.swift */; };
 		C2494AC0237E735C0020522B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2494ABF237E735C0020522B /* Assets.xcassets */; };
 		C2494AC3237E735C0020522B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2494AC2237E735C0020522B /* Preview Assets.xcassets */; };
 		C2494AD1237E735C0020522B /* Assignment1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2494AD0237E735C0020522B /* Assignment1Tests.swift */; };
@@ -40,7 +39,6 @@
 /* Begin PBXFileReference section */
 		C2494AB6237E735B0020522B /* Assignment1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Assignment1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2494AB9237E735B0020522B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C2494ABD237E735B0020522B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C2494ABF237E735C0020522B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C2494AC2237E735C0020522B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C2494AC7237E735C0020522B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -116,7 +114,6 @@
 				C2494AEB237E73D00020522B /* Storyboard */,
 				C2494AEA237E73BA0020522B /* Extensions */,
 				C2494AE9237E73A40020522B /* Delegates */,
-				C2494ABD237E735B0020522B /* ContentView.swift */,
 				C2494AC7237E735C0020522B /* Info.plist */,
 				C2494AC1237E735C0020522B /* Preview Content */,
 			);
@@ -385,7 +382,6 @@
 				C2494ABA237E735B0020522B /* AppDelegate.swift in Sources */,
 				C2494AFF237E85720020522B /* UsersLisViewControllert.swift in Sources */,
 				C2494AFD237E80210020522B /* UserTableViewCell.swift in Sources */,
-				C2494ABE237E735B0020522B /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

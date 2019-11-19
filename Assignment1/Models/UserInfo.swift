@@ -10,11 +10,11 @@ import Foundation
 
 class UserInfo  {
     
-    var id: Int
-    var name: String
+    let id: Int
+    let name: String
     
     init(id: Int, name: String) {
-           self.name = name
-           self.id = id
-       }
+        self.name = name
+        self.id = id
+    }
 }
