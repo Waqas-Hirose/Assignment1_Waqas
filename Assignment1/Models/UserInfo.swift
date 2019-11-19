@@ -20,6 +20,6 @@ class UserInfo  {
 }
 
 enum SortTypes :Int{
-case sortById
-case sortByName
+    case sortById
+    case sortByName
 }

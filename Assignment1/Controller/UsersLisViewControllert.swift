@@ -60,9 +60,7 @@ class UsersListViewController : UIViewController, UITableViewDataSource{
             tableView.reloadData()
             
         case SortTypes.sortByName:
-            usersList = usersList.sorted {
-                $0.name < $1.name
-            }
+            usersList = usersList.sorted(by: { $0.name < $1.name })
             tableView.reloadData()
         }
     }
